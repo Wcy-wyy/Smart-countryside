@@ -1,0 +1,12 @@
+.idea
+logs
+target
+test
+
+*.yml
+*.md
+*.iml
+*.txt
+*.log
+# --- JRebel
+/**/rebel.xml
