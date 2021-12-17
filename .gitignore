@@ -8,5 +8,6 @@ test
 *.iml
 *.txt
 *.log
+*.xml
 # --- JRebel
 /**/rebel.xml
