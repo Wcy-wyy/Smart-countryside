@@ -7,9 +7,10 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.mohan.module.login.domain.Login;
 import com.mohan.module.login.service.ILoginService;
-import com.mohan.module.user.domain.User;
-import com.mohan.module.user.service.IUserService;
+import com.mohan.module.user.domain.SysUser;
+import com.mohan.module.user.service.ISysUserService;
 import com.mohan.result.Result;
+import com.mohan.utils.AESUtils;
 import com.mohan.utils.jedis.JedisUtil;
 import com.mohan.utils.snowflake.SnowflakeIdWorker;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,14 +24,14 @@ public class LoginServiceImpl implements ILoginService {
     @Autowired
     private JedisUtil jedisUtil;
     @Autowired
-    private IUserService userService;
+    private ISysUserService sysUserService;
     @Autowired
     private SnowflakeIdWorker snowflakeIdWorker;
 
     @Override
     public Result LoginAuthentication(Login login) {
-        User user = this.userService.getOne(new QueryWrapper<User>().eq("account", login.getAccount()));
-        if (ObjectUtil.isNull(user) || user.getPassword().equals(login.getPassword())) {
+        SysUser user = this.sysUserService.getOne(new QueryWrapper<SysUser>().eq("account", login.getAccount()));
+        if (ObjectUtil.isNull(user) || !user.getPassword().equals(AESUtils.aesEncryptStr(login.getPassword(), user.getSalt()))) {
             return Result.success("账号或密码输入不正确");
         }
 

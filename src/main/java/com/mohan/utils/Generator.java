@@ -118,7 +118,7 @@ public class Generator {
         strategy.setRestControllerStyle(true);
 
         strategy.setInclude(
-                "user_role"
+                "role"
         );
 
         strategy.setControllerMappingHyphenStyle(true);

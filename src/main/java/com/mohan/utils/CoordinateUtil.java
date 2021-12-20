@@ -9,6 +9,10 @@ import lombok.Data;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 高德地图获取经纬度坐标工具类
+ *
+ */
 public class CoordinateUtil {
     public static void main(String[] args) {
         @Data

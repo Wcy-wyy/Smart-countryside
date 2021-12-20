@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Data
 @Accessors(chain = true)
 @TableName(value = "user")
-public class User {
+public class SysUser {
     private String id;
 
     private String name;
@@ -29,6 +29,10 @@ public class User {
     private Integer status;
 
     private String salt;
+
+    private String createUser;
+
+    private String updateUser;
 
     private LocalDateTime createTime;
 

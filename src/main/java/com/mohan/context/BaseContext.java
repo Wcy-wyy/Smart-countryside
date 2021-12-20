@@ -2,10 +2,7 @@ package com.mohan.context;
 
 import com.alibaba.fastjson.JSONObject;
 import com.mohan.constant.LoginConstants;
-import com.mohan.module.user.domain.User;
-import com.mohan.utils.jedis.JedisUtil;
-import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.mohan.module.user.domain.SysUser;
 import org.springframework.util.ObjectUtils;
 
 import java.util.HashMap;
@@ -34,15 +31,15 @@ public class BaseContext {
         return map.get(key);
     }
 
-    public static void setUser(User user) {
+    public static void setUser(SysUser user) {
         set("user", user);
     }
 
 
-    public static User getUser() {
+    public static SysUser getUser() {
         Object user = get("user");
         if (!ObjectUtils.isEmpty(user)) {
-            return JSONObject.parseObject(JSONObject.toJSONString(user), User.class);
+            return JSONObject.parseObject(JSONObject.toJSONString(user), SysUser.class);
         }
         return null;
     }

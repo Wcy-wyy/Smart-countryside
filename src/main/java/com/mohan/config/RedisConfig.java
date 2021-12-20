@@ -27,13 +27,13 @@ public class RedisConfig {
 
     private static final Integer database = 0;
 
-    private static final int maxActive = 1000;
+    private static final Integer maxActive = 1000;
 
     private static final String strMaxWaitMillis = "3600";
 
     private static final Integer maxIdle = 100;
 
-    private static final int minIdle = 20;
+    private static final Integer minIdle = 20;
 
     @Bean
     public JedisPool jedisPool() {
