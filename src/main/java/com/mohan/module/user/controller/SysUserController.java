@@ -2,6 +2,7 @@ package com.mohan.module.user.controller;
 
 import com.mohan.annotation.WebLog;
 import com.mohan.module.user.domain.SysUser;
+import com.mohan.module.user.dto.UserDTO;
 import com.mohan.module.user.service.ISysUserService;
 import com.mohan.result.Result;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,10 @@ public class SysUserController {
 
     @WebLog
     @PostMapping("add")
-    public Result add(@RequestBody SysUser user) {
-        return Result.success(sysUserService.addUser(user));
+    public Result add(@RequestBody UserDTO userDTO) {
+        return Result.success(sysUserService.addUser(userDTO));
     }
+
+
+
 }

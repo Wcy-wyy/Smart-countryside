@@ -1,10 +1,9 @@
-package com.mohan.module.user.domain;
+package com.mohan.module.permission.domain;
 
 import java.time.LocalDateTime;
 import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.experimental.Accessors;
 
 /**
  * <p>
@@ -15,9 +14,8 @@ import lombok.experimental.Accessors;
  * @since 2021-12-20
  */
 @Data
-@Accessors(chain = true)
 @EqualsAndHashCode(callSuper = false)
-public class SysUserRole implements Serializable {
+public class SysPermission implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -27,18 +25,33 @@ public class SysUserRole implements Serializable {
     private String id;
 
     /**
-     * user_id
+     * 名称
      */
-    private String userId;
-    /**
-     * role_id
-     */
-    private String roleId;
+    private String name;
 
     /**
-     * 状态
+     * 父id
      */
-    private String status;
+    private String pid;
+
+    /**
+     * 备注
+     */
+    private String remark;
+
+    /**
+     * 类型
+     */
+    private String type;
+
+    private String permission;
+
+    private String extensions;
+
+    /**
+     * 展示
+     */
+    private String isShow;
 
     /**
      * 删除

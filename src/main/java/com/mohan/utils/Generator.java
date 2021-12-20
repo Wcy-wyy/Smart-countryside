@@ -34,7 +34,7 @@ public class Generator {
 
         String dirModule = "";
 
-        String dirParent = "com.mohan.module";
+        String dirParent = "com.mohan.module.permission";
         String dirEntity = "domain";
         String dirMapper = "mapper";
         String dirService = "service";
@@ -118,7 +118,7 @@ public class Generator {
         strategy.setRestControllerStyle(true);
 
         strategy.setInclude(
-                "role"
+                "sys_permission"
         );
 
         strategy.setControllerMappingHyphenStyle(true);

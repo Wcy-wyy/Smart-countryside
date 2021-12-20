@@ -17,12 +17,12 @@ import lombok.experimental.Accessors;
 @Data
 @Accessors(chain = true)
 @EqualsAndHashCode(callSuper = false)
-public class SysUserRole implements Serializable {
+public class SysUserArea implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * id
+     *  id
      */
     private String id;
 
@@ -30,10 +30,11 @@ public class SysUserRole implements Serializable {
      * user_id
      */
     private String userId;
+
     /**
-     * role_id
+     * area_code
      */
-    private String roleId;
+    private String areaCode;
 
     /**
      * 状态
