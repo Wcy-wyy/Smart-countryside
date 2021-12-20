@@ -29,6 +29,12 @@ public class ExCallShellUtils {
         }
     }
 
+    /**
+     * 执行shell脚本
+     *
+     * @param script sh脚本
+     * @param workspace 路径
+     */
     public static void callScript(String script, String... workspace){
         try {
             String cmd = "sh " + script;
