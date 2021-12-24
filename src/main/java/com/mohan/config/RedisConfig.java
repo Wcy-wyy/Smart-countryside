@@ -17,13 +17,13 @@ import redis.clients.jedis.JedisPoolConfig;
 @Configuration
 public class RedisConfig {
 
-    private static final String host = "121.199.35.237";
+    private static String host;
 
     private static final Integer port = 6379;
 
     private static final String strTimeout = "3600";
 
-    private static final String password = "xuanji20180801";
+    private static String password;
 
     private static final Integer database = 0;
 

@@ -2,7 +2,7 @@ package com.mohan.context;
 
 import com.alibaba.fastjson.JSONObject;
 import com.mohan.constant.LoginConstants;
-import com.mohan.module.user.domain.SysUser;
+import com.mohan.module.auth.user.domain.SysUser;
 import org.springframework.util.ObjectUtils;
 
 import java.util.HashMap;

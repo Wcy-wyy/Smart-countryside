@@ -3,7 +3,7 @@ package com.mohan.utils;
 import cn.hutool.core.util.ObjectUtil;
 import com.alibaba.fastjson.JSONObject;
 import com.mohan.context.BaseContext;
-import com.mohan.module.user.domain.SysUser;
+import com.mohan.module.auth.user.domain.SysUser;
 import com.mohan.utils.jedis.JedisUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
