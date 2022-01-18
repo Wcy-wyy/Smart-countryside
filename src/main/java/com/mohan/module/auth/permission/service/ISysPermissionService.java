@@ -13,4 +13,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface ISysPermissionService extends IService<SysPermission> {
 
+    boolean add(SysPermission permission);
+
 }

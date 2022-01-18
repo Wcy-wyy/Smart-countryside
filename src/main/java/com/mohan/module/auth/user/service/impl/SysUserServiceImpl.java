@@ -35,7 +35,7 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
         LocalDateTime time = LocalDateTime.now();
 
         // 获取随机字符串数列加盐
-        String random = UUID.randomUUID().toString();
+        String random = UUID.randomUUID().toString().replaceAll("-","");
 
         // 获取当前当前操作人信息
         SysUser userHelper = new UserHelper().getUser();
@@ -44,6 +44,7 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
 
         user.setCreateTime(time)
                 .setUpdateTime(time)
+                .setAccount(user.getPhone())
                 .setPassword(AESUtils.aesEncryptStr(user.getPassword(), random))
                 .setSalt(random)
                 .setCreateUser(userHelper.getId())
@@ -67,7 +68,7 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
 
         SysUserArea userArea = new SysUserArea();
         userArea.setUserId(user.getId())
-                .setAreaCode(userDTO.getArea().getArea_code())
+                .setAreaCode(userDTO.getArea().getAreaCode())
                 .setCreateUser(userHelper.getId())
                 .setUpdateUser(userHelper.getId())
                 .setCreateTime(time)

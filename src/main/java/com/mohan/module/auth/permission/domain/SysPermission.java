@@ -2,8 +2,11 @@ package com.mohan.module.auth.permission.domain;
 
 import java.time.LocalDateTime;
 import java.io.Serializable;
+
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
 
 /**
  * <p>
@@ -14,6 +17,8 @@ import lombok.EqualsAndHashCode;
  * @since 2021-12-20
  */
 @Data
+@Accessors(chain = true)
+@TableName(value = "sys_permission")
 @EqualsAndHashCode(callSuper = false)
 public class SysPermission implements Serializable {
 

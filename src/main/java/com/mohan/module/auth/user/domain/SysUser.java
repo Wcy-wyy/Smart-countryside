@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 @Data
 @Accessors(chain = true)
-@TableName(value = "user")
+@TableName(value = "sys_user")
 public class SysUser {
     private String id;
 

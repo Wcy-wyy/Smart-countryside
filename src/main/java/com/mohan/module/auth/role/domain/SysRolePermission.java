@@ -1,6 +1,8 @@
 package com.mohan.module.auth.role.domain;
 
 import java.io.Serializable;
+
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -15,6 +17,7 @@ import lombok.experimental.Accessors;
  */
 @Data
 @Accessors(chain = true)
+@TableName("sys_role_permission")
 @EqualsAndHashCode(callSuper = false)
 public class SysRolePermission implements Serializable {
 

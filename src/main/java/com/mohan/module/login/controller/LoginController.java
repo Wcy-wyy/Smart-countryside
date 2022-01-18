@@ -1,5 +1,6 @@
 package com.mohan.module.login.controller;
 
+import com.mohan.annotation.NoToken;
 import com.mohan.module.login.domain.Login;
 import com.mohan.module.login.service.ILoginService;
 import com.mohan.result.Result;
@@ -14,7 +15,8 @@ public class LoginController {
     private ILoginService loginService;
 
     @PostMapping("login")
+    @NoToken
     public Result login(@RequestBody Login login) {
-        return Result.success("登录成功",loginService.LoginAuthentication(login).getData());
+        return Result.success(loginService.LoginAuthentication(login));
     }
 }

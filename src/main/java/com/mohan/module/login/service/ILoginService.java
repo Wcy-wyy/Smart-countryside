@@ -10,5 +10,5 @@ public interface ILoginService {
      * @param login 登录信息
      * @return token
      */
-    Result LoginAuthentication(Login login);
+    String LoginAuthentication(Login login);
 }
