@@ -15,4 +15,8 @@ import com.mohan.module.system.user.dto.UserDTO;
  */
 public interface IMallUserService extends IService<MallUser> {
     IPage<MallUser> page(UserDTO userDTO);
+
+    boolean add(MallUser user);
+
+    boolean updateUser(MallUser user);
 }

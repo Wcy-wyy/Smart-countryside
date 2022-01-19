@@ -29,12 +29,12 @@ public class Generator {
         String db_className = "com.mysql.cj.jdbc.Driver";
         String db_url = "jdbc:mysql://121.199.35.237:3306/smart_countryside?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8";
         String db_username = "root";
-        String db_password = "dRx9QZfRHC4R";
+        String db_password = "   ";
 
 
         String dirModule = "";
 
-        String dirParent = "com.mohan.module.user";
+        String dirParent = "com.mohan.module.system.land";
         String dirEntity = "domain";
         String dirMapper = "mapper";
         String dirService = "service";
@@ -118,7 +118,7 @@ public class Generator {
         strategy.setRestControllerStyle(true);
 
         strategy.setInclude(
-                "mall_user"
+                "mall_land"
         );
 
         strategy.setControllerMappingHyphenStyle(true);

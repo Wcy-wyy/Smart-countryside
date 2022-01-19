@@ -4,6 +4,7 @@ import com.mohan.annotation.NoToken;
 import com.mohan.constant.LoginConstants;
 import com.mohan.context.BaseContext;
 import com.mohan.exception.BaseException;
+import com.mohan.module.auth.user.domain.SysUser;
 import com.mohan.utils.jedis.JedisUtil;
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
@@ -17,6 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import static com.mohan.constant.LoginConstants.AUTH_KEY;
+import static com.mohan.constant.LoginConstants.LOGIN_USER;
 
 
 @Slf4j
